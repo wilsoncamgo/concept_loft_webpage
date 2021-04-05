@@ -16,6 +16,9 @@ class AppBarConcept extends StatelessWidget {
         children: [
           ConceptLogo(),
           SizedBox(
+            height: 50,
+          ),
+          SizedBox(
             width: width>800?width*0.5:width,
             child: Row(
               mainAxisSize: MainAxisSize.min,
