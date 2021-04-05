@@ -15,43 +15,115 @@ class AppBarConcept extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           ConceptLogo(),
-          Row(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Text(
-                "Inicio",
-                style: TextStyle(
-                  fontSize: width * 0.02,
-                  fontWeight: FontWeight.w100,
-                  color: Colors.black,
+          SizedBox(
+            width: width>800?width*0.5:width,
+            child: Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Expanded(
+                  child: InkWell(
+                    highlightColor: Colors.brown[400],
+                    enableFeedback: true,
+                    borderRadius: BorderRadius.circular(10),
+                    focusColor: Colors.brown[400],
+                    splashColor: Colors.brown[400],
+                    onTap: () => Navigator.pushNamed(context, '/'),
+                    child: Text(
+                      'Inicio',
+                      textAlign: TextAlign.center,
+                      maxLines: 1,
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: width * 0.015,
+                        fontWeight: FontWeight.w100,
+                      ),
+                    ),
+                  ),
                 ),
-              ),
-              Text(
-                "Nuestros Productos",
-                style: TextStyle(
-                  fontSize: width * 0.02,
-                  fontWeight: FontWeight.w100,
-                  color: Colors.black,
+                Expanded(
+                  child: InkWell(
+                    highlightColor: Colors.brown[400],
+                    enableFeedback: true,
+                    focusColor: Colors.brown[400],
+                    borderRadius: BorderRadius.circular(10),
+                    splashColor: Colors.brown[400],
+                    onTap: () =>
+                        Navigator.pushNamed(context, '/services'),
+                    child: Text(
+                      'Nuestros Productos',
+                      maxLines: 2,
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: width * 0.015,
+                        fontWeight: FontWeight.w100,
+                      ),
+                    ),
+                  ),
                 ),
-              ),
-              Text(
-                "Catálogo",
-                style: TextStyle(
-                  fontSize: width * 0.02,
-                  fontWeight: FontWeight.w100,
-                  color: Colors.black,
+                Expanded(
+                  child: InkWell(
+                    highlightColor: Colors.brown[400],
+                    enableFeedback: true,
+                    focusColor: Colors.brown[400],
+                    borderRadius: BorderRadius.circular(10),
+                    splashColor: Colors.brown[400],
+                    onTap: () => network.launchBlog(),
+                    child: Text(
+                      'Catálogo',
+                      textAlign: TextAlign.center,
+                      maxLines: 2,
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: width * 0.015,
+                        fontWeight: FontWeight.w100,
+                      ),
+                    ),
+                  ),
                 ),
-              ),
-              Text(
-                "Acerca de Nosotros",
-                style: TextStyle(
-                  fontSize: width * 0.02,
-                  fontWeight: FontWeight.w100,
-                  color: Colors.black,
+                Expanded(
+                  child: InkWell(
+                    highlightColor: Colors.brown[400],
+                    enableFeedback: true,
+                    focusColor: Colors.brown[400],
+                    borderRadius: BorderRadius.circular(10),
+                    splashColor: Colors.brown[400],
+                    onTap: () =>
+                        Navigator.pushNamed(context, '/contact'),
+                    child: Text(
+                      'Contactanos',
+                      maxLines: 1,
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: width * 0.015,
+                        fontWeight: FontWeight.w100,
+                      ),
+                    ),
+                  ),
                 ),
-              ),
-              
-            ],
+                Expanded(
+                  child: InkWell(
+                    highlightColor: Colors.brown[400],
+                    enableFeedback: true,
+                    focusColor: Colors.brown[400],
+                    borderRadius: BorderRadius.circular(10),
+                    splashColor: Colors.brown[400],
+                    onTap: () => Navigator.pushNamed(context, '/form'),
+                    child: Text(
+                      'Acerca de Nosotros',
+                      maxLines: 2,
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: width * 0.015,
+                        fontWeight: FontWeight.w100,
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
           )
         ],
       ),
