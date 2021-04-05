@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <!--
     If you are serving your web app in a path other than the root, change the
@@ -24,15 +25,28 @@
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png"/>
+  <link rel="icon" type="image/png" href="favicon.png" />
 
   <title>concept_loft_webpage</title>
   <link rel="manifest" href="manifest.json">
 </head>
+
 <body>
-  <!-- This script installs service_worker.js to provide PWA functionality to
-       application. For more information, see:
-       https://developers.google.com/web/fundamentals/primers/service-workers -->
+  <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-analytics.js"></script>
+  <script>
+    var firebaseConfig = {
+      apiKey: "AIzaSyBh2yxL_SxTo1feSoe6oCfXm-iqfWZu65s",
+      authDomain: "conceptloft-506f3.firebaseapp.com",
+      projectId: "conceptloft-506f3",
+      storageBucket: "conceptloft-506f3.appspot.com",
+      messagingSenderId: "393511186375",
+      appId: "1:393511186375:web:99d20d815e3c7be9df33e2",
+      measurementId: "G-6E49FGPJ3W"
+    };
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+  </script>
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('flutter-first-frame', function () {
@@ -42,4 +56,5 @@
   </script>
   <script src="main.dart.js" type="application/javascript"></script>
 </body>
+
 </html>

@@ -1,8 +1,11 @@
+import 'package:concept_loft_webpage/services/analytics_service.dart';
 import 'package:flutter/material.dart';
 
-import 'main_page.dart';
+import 'locator.dart';
+import 'screens/home/main_page.dart';
 
 void main() {
+  setupLocator();
   runApp(MyApp());
 }
 
@@ -11,11 +14,22 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'ConceptLoft Webpage',
+      title: 'Muebles Concept Loft',
       theme: ThemeData(
-        visualDensity: VisualDensity.adaptivePlatformDensity,
+        primarySwatch: Colors.brown,
       ),
-      home: MainPage(),
+      initialRoute: '/',
+      navigatorObservers: <NavigatorObserver>[
+        locator<AnalyticsService>().getAnalyticsObserver(),
+      ],
+      routes: {
+        '/': (context) => MainPage(),
+        /*
+        '/services': (context) => OurServices(),
+        '/form': (context) => FormScreen(),
+        '/contact': (context) => ContactUs(),
+        */
+      },
     );
   }
 }
