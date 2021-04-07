@@ -1,5 +1,6 @@
 import 'package:concept_loft_webpage/services/analytics_service.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import 'locator.dart';
 import 'screens/home/main_page.dart';
@@ -17,6 +18,9 @@ class MyApp extends StatelessWidget {
       title: 'Muebles Concept Loft',
       theme: ThemeData(
         primarySwatch: Colors.brown,
+        textTheme: GoogleFonts.ralewayTextTheme(
+          Theme.of(context).textTheme,
+        ),
       ),
       initialRoute: '/',
       navigatorObservers: <NavigatorObserver>[

@@ -22,6 +22,7 @@ class FloatingButton extends StatelessWidget {
                 height: height * 0.1,
                 padding: EdgeInsets.symmetric(
                   vertical: 10,
+                  horizontal: 5,
                 ),
                 child: FittedBox(
                   fit: BoxFit.contain,
@@ -44,6 +45,7 @@ class FloatingButton extends StatelessWidget {
                 height: height * 0.1,
                 padding: EdgeInsets.symmetric(
                   vertical: 10,
+                  horizontal: 5,
                 ),
                 child: FittedBox(
                   fit: BoxFit.contain,

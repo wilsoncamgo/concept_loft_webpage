@@ -8,8 +8,8 @@ class ConceptLogo extends StatelessWidget {
     final width = MediaQuery.of(context).size.width;
     final height = MediaQuery.of(context).size.height;
     return SizedBox(
-      height: height / 10,
-      width: width / 6,
+      height: height / 11,
+      width: width / 4,
       child: InkWell(
         onTap: () => Navigator.pushNamed(context, '/'),
         child: Image.asset(
