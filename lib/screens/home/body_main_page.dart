@@ -23,7 +23,9 @@ class _BodyMainPageState extends State<BodyMainPage> {
           Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              AppBarConcept(),
+              AppBarConcept(
+                mainPage: true,
+              ),
               width > 700
                   ? SizedBox(
                       width: width * 0.5,
@@ -240,7 +242,7 @@ class _BodyMainPageState extends State<BodyMainPage> {
                   padding: EdgeInsets.symmetric(
                       vertical: height * 0.05, horizontal: width * 0.05),
                   child: Text(
-                    "Familia por encima",
+                    "Rediseña tus espacios",
                     style: TextStyle(
                       fontSize: width * 0.02,
                       fontWeight: FontWeight.w100,

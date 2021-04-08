@@ -3,7 +3,11 @@ import 'package:concept_loft_webpage/common_widgets/networks.dart';
 import 'package:flutter/material.dart';
 
 class AppBarConcept extends StatelessWidget {
-  const AppBarConcept({Key key}) : super(key: key);
+  final bool mainPage;
+  const AppBarConcept({Key key, @required mainPage})
+      : mainPage = mainPage ?? false,
+        super(key: key);
+
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +23,7 @@ class AppBarConcept extends StatelessWidget {
             height: 20,
           ),
           SizedBox(
-            width: width>700?width*0.5:width,
+            width: width > 700 && this.mainPage? width * 0.5 : width,
             child: Row(
               mainAxisSize: MainAxisSize.min,
               children: [
@@ -50,8 +54,7 @@ class AppBarConcept extends StatelessWidget {
                     focusColor: Colors.brown[400],
                     borderRadius: BorderRadius.circular(10),
                     splashColor: Colors.brown[400],
-                    onTap: () =>
-                        Navigator.pushNamed(context, '/services'),
+                    onTap: () => Navigator.pushNamed(context, '/products'),
                     child: Text(
                       'Nuestros Productos',
                       maxLines: 2,
@@ -91,8 +94,7 @@ class AppBarConcept extends StatelessWidget {
                     focusColor: Colors.brown[400],
                     borderRadius: BorderRadius.circular(10),
                     splashColor: Colors.brown[400],
-                    onTap: () =>
-                        Navigator.pushNamed(context, '/contact'),
+                    onTap: () => Navigator.pushNamed(context, '/contact'),
                     child: Text(
                       'Contactanos',
                       maxLines: 1,

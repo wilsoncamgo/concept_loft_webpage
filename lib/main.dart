@@ -1,3 +1,4 @@
+import 'package:concept_loft_webpage/screens/about_furniture.dart';
 import 'package:concept_loft_webpage/services/analytics_service.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -28,6 +29,7 @@ class MyApp extends StatelessWidget {
       ],
       routes: {
         '/': (context) => MainPage(),
+        '/products': (context) => AboutFurniture(),
         /*
         '/services': (context) => OurServices(),
         '/form': (context) => FormScreen(),
