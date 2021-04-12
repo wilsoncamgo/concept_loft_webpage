@@ -36,7 +36,7 @@ class _SampleContactUsState extends State<SampleContactUs> {
 
       final mapOptions = MapOptions()
         ..zoom = 15
-        ..center = LatLng(33.821303336425125, -117.98206076620306)
+        ..center = LatLng(4.6727389,-74.0722429)
         ..gestureHandling = "cooperative";
 
       final elem = DivElement()
