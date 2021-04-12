@@ -1,7 +1,11 @@
+import 'dart:convert';
+import 'dart:io';
+
 import 'package:concept_loft_webpage/common_widgets/app_bar_concept.dart';
 import 'package:concept_loft_webpage/common_widgets/floating_button.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:http/http.dart' as http;
 
 class AboutFurniture extends StatefulWidget {
   AboutFurniture({Key key}) : super(key: key);
@@ -11,6 +15,27 @@ class AboutFurniture extends StatefulWidget {
 }
 
 class _AboutFurnitureState extends State<AboutFurniture> {
+  Future<http.Response> fetchPhotos() async {
+    final response = await http.get(
+      Uri.parse(
+          'https://api.unsplash.com/search/photos?page=1&query=furniture&orientation=landscape'),
+      // Send authorization headers to the backend.
+      headers: {
+        HttpHeaders.authorizationHeader:
+            "Client-ID QAylrX4ZMePjusm0vlMvxu9R5eRPufFYRM2ZrKU1wZo"
+      },
+    );
+    if (response.statusCode == 200) {
+      // If the server did return a 200 OK response,
+      // then parse the JSON.
+      return response;
+    } else {
+      // If the server did not return a 200 OK response,
+      // then throw an exception.
+      throw Exception('Failed to load photos');
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
@@ -305,19 +330,21 @@ class _AboutFurnitureState extends State<AboutFurniture> {
               ),
               textAlign: TextAlign.center,
             ),
-            Row(
-              children: [
-                Expanded(
-                  child: Image.asset('assets/img/couch.png'),
-                ),
-                Expanded(
-                  child: Image.asset('assets/img/chair.png'),
-                ),
-                Expanded(
-                  child: Image.asset('assets/img/dinning_room_2.png'),
-                ),
-              ],
-            )
+            SizedBox(
+              height: 100,
+            ),
+            /*
+            FutureBuilder(
+              future: this.fetchPhotos(),
+              builder: (context, snapshot) {
+                if(snapshot.hasData){
+                  //print(jsonDecode(snapshot.data).toString());
+                }
+                //print(jsonDecode(snapshot.data));
+                return Container();
+              },
+            ),
+            */
           ],
         ),
       ),

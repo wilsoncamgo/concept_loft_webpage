@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class PresetButton extends StatelessWidget {
   final String textInside;
-  final Function onPressed;
+  final GestureTapCallback onPressed;
   final bool alternateColor;
   PresetButton(
       {Key key,

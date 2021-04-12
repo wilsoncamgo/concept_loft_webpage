@@ -1,5 +1,6 @@
 import 'package:concept_loft_webpage/common_widgets/app_bar_concept.dart';
 import 'package:concept_loft_webpage/common_widgets/preset_button.dart';
+import 'package:concept_loft_webpage/screens/contact_us/sample_contact_us.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -254,6 +255,7 @@ class _BodyMainPageState extends State<BodyMainPage> {
               ),
             ],
           ),
+          SampleContactUs(),
         ],
       ),
     );

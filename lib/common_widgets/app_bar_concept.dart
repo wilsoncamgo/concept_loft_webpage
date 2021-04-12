@@ -74,7 +74,7 @@ class AppBarConcept extends StatelessWidget {
                     focusColor: Colors.brown[400],
                     borderRadius: BorderRadius.circular(10),
                     splashColor: Colors.brown[400],
-                    onTap: () => network.launchBlog(),
+                    onTap: () => {},
                     child: Text(
                       'Catálogo',
                       textAlign: TextAlign.center,
