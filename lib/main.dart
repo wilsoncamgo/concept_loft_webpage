@@ -4,6 +4,7 @@ import 'package:concept_loft_webpage/services/analytics_service.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import 'common_widgets/no_transitions_web.dart';
 import 'locator.dart';
 import 'screens/home/main_page.dart';
 
@@ -18,8 +19,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Muebles Concept Loft',
+      
       theme: ThemeData(
         primarySwatch: Colors.brown,
+        pageTransitionsTheme: NoTransitionsOnWeb(),
         textTheme: GoogleFonts.ralewayTextTheme(
           Theme.of(context).textTheme,
         ),

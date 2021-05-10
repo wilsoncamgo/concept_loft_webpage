@@ -67,6 +67,7 @@ class AppBarConcept extends StatelessWidget {
                     ),
                   ),
                 ),
+                /*
                 Expanded(
                   child: InkWell(
                     highlightColor: Colors.brown[400],
@@ -87,6 +88,7 @@ class AppBarConcept extends StatelessWidget {
                     ),
                   ),
                 ),
+                */
                 Expanded(
                   child: InkWell(
                     highlightColor: Colors.brown[400],
@@ -114,7 +116,7 @@ class AppBarConcept extends StatelessWidget {
                     focusColor: Colors.brown[400],
                     borderRadius: BorderRadius.circular(10),
                     splashColor: Colors.brown[400],
-                    onTap: () => Navigator.pushNamed(context, '/form'),
+                    //onTap: () => Navigator.pushNamed(context, '/form'),
                     child: Text(
                       'Acerca de Nosotros',
                       maxLines: 2,

@@ -54,15 +54,15 @@ class _SampleContactUsState extends State<SampleContactUs> {
       var xCaretEventsText = '<div id="content">' +
           '<div id="siteNotice">' +
           '</div>' +
-          '<h1 id="firstHeading" class="firstHeading">Xcaret Events</h1>' +
+          '<h1 id="firstHeading" class="firstHeading">Muebles Concept Loft</h1>' +
           '<div id="bodyContent">' +
-          '<p>Specialized in High End Events'
-              '</p> Make your dream come true, contact us and get your quote</p>' +
-          '<p>Contact Us:  <a href="https://api.whatsapp.com/send?phone=+17143567188">' +
+          '<p>Especializados en muebles de alta calidad'
+              '</p> Muebles a tu medida y con la mejor calidad</p>' +
+          '<p>Contáctanos:  <a href="https://api.whatsapp.com/send?phone=+573208393398">' +
           'Whatsapp Business</a> ' +
           '</p>' +
-          '<p>How to get?<a href="https://www.google.com/maps/search/?api=1&query=2746W%20Stonybrook%20DR%20Anaheim%2C%20District%20of%20California%2C%2020003">' +
-          'Get directions on Google Maps</a></p>' +
+          '<p>How to get?<a href="https://www.google.com/maps/search/?api=1&query=New%20Concept%20Loft%20Bogota%2C%20Cundinamarca%2C%111051">' +
+          'Obten indicaciones en Google Maps</a></p>' +
           '</div>' +
           '</div>';
       final infoXcaret =
